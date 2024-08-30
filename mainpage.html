@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>To-Do-List App</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        
+        .task { 
+            margin-top: 20px;
+            width: 60%;
+            margin-left: 20%;
+            text-align: left;
+        }
+
+        .Do { 
+            list-style-type: none;
+            padding: 0;
+            margin-top: 10px;
+        }
+
+        .Do li, .comp li { 
+            background-color: #EBD8D4;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 10px;
+            margin: 5px 0;
+            max-width: 400px;
+            position: relative;
+        }
+
+        .Do li button, .comp li button { 
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+
+        .comp li { 
+            text-decoration: line-through;
+            color: blue;
+            background-color: #e0e0e0;
+        }
+
+        h3 {
+            color: blueviolet;
+            font-family: 'Courier New', Courier, serif;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <h2 style="color:rgb(226, 43, 171)">To-Do-List</h2>
+        <input style="width:40%;height:25px"  type="text" id="taskInput" placeholder="Enter your task...">
+        <button style="color:blueviolet;width:5%;height:25px;" onclick="addTask()">ADD</button>
+        <button style="color:#FC0FC0; height:26px" id="deleteAllButton" onclick="deleteall()">Delete All Tasks</button>
+    </div>
+
+    <div class="task"> 
+        <h3>*Pending Tasks*</h3>
+        <ul id="pendingTasks" class="Do"> 
+            
+        </ul>
+    </div>
+
+    <div class="task"> 
+        <h3>*Completed Tasks*</h3>
+        <ul id="completedTasks" class="comp"> 
+            
+        </ul>
+    </div>
+
+    <script src="code.js"></script>
+</body>
+</html>
